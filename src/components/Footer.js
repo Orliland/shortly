@@ -9,7 +9,10 @@ import { IconContext } from "react-icons";
 function FooterMenuLink(props) {
   return (
     <li className="my-3">
-      <a href="#" className="text-gray-light hover:opacity-70">
+      <a
+        href={"/" + props.value.toLowerCase()}
+        className="text-gray-light hover:opacity-70"
+      >
         {props.value}
       </a>
     </li>
@@ -31,8 +34,8 @@ function FooterMenu(props) {
 function SocialLink(props) {
   return (
     <IconContext.Provider value={{ size: "1.5em" }}>
-      <a href="#" className="hover:opacity-70">
-        {props.value}
+      <a href={"/" + props.value[1]} className="hover:opacity-70">
+        {props.value[0]}
       </a>
     </IconContext.Provider>
   );
@@ -61,10 +64,14 @@ function Footer() {
         </div>
 
         <div className="flex gap-6 justify-center">
-          <SocialLink value={<FaFacebookSquare />} />
-          <SocialLink value={<FaTwitter />} />
-          <SocialLink value={<FaPinterest />} />
-          <SocialLink value={<FaInstagram />} />
+          <SocialLink
+            value={[<FaFacebookSquare />, "https://facebook.com/shortly"]}
+          />
+          <SocialLink value={[<FaTwitter />, "htttps://twitter.com/shortly"]} />
+          <SocialLink
+            value={[<FaPinterest />, "https://pinterest.com/shortly"]}
+          />
+          <SocialLink value={[<FaInstagram />, "https://instagram/shortly"]} />
         </div>
       </div>
     </footer>
