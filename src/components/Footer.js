@@ -11,7 +11,7 @@ function FooterMenuLink(props) {
     <li className="my-3">
       <a
         href={"/" + props.value.toLowerCase()}
-        className="text-gray-light hover:opacity-70"
+        className="text-gray hover:text-cyan"
       >
         {props.value}
       </a>
@@ -34,7 +34,7 @@ function FooterMenu(props) {
 function SocialLink(props) {
   return (
     <IconContext.Provider value={{ size: "1.5em" }}>
-      <a href={"/" + props.value[1]} className="hover:opacity-70">
+      <a href={"/" + props.value[1]} className="hover:text-cyan">
         {props.value[0]}
       </a>
     </IconContext.Provider>
@@ -43,7 +43,7 @@ function SocialLink(props) {
 
 function Footer() {
   return (
-    <footer className="w-full bg-gray-dark text-white text-center p-14">
+    <footer className="w-full bg-very-dark-violet text-white text-center p-14">
       <div className="container mx-auto max-w-6xl grid grid-cols-1 gap-8 lg:grid-cols-4 lg:grid-rows-1">
         <h2 className="text-4xl font-bold mb-4 lg:justify-self-start">
           Shortly
@@ -63,7 +63,7 @@ function Footer() {
           />
         </div>
 
-        <div className="flex gap-6 justify-center">
+        <div className="flex gap-6 justify-center max-h-0">
           <SocialLink
             value={[<FaFacebookSquare />, "https://facebook.com/shortly"]}
           />
