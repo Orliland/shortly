@@ -1,22 +1,20 @@
+import React, { Component } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar.js";
-import Hero from "./components/Hero.js";
-import Shorter from "./components/Shorter.js";
-import Features from "./components/Features.js";
-import CallToAction from "./components/CallToAction.js";
-import Footer from "./components/Footer.js";
+import Footer from "./components/Footer";
+// import Navbar from "./components/Navbar.js";
+// import Hero from "./components/Hero.js";
+// import Shorter from "./components/Shorter.js";
+// import Features from "./components/Features.js";
+// import CallToAction from "./components/CallToAction.js";
 
-function App() {
-  return (
-    <div className="w-full">
-      <Navbar />
-      <Hero />
-      <Shorter />
-      <Features />
-      <CallToAction />
-      <Footer />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="w-full">
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
